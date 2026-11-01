@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import { artworkImages } from "@/data/site";
 
 export function PhotoTilt() {
   const frame = useRef<HTMLDivElement>(null);
@@ -25,5 +26,5 @@ export function PhotoTilt() {
     frame.current?.style.setProperty("--tilt-y", "0deg");
     frame.current?.style.setProperty("--tilt-x", "0deg");
   }
-  return <div ref={frame} className="tilt-frame" onPointerMove={move} onPointerLeave={reset}><Image src="/images/white-vases.webp" alt="צילום אווירה של אגרטלים לבנים באור טבעי; לא יצירות של אסתר" width={1000} height={1312} sizes="(max-width: 600px) 75vw, 30vw" loading="lazy"/><div className="tilt-caption"><span>אור. חומר. נוכחות.</span><span dir="ltr">A DIFFERENT PERSPECTIVE</span></div></div>;
+  return <div ref={frame} className="tilt-frame" onPointerMove={move} onPointerLeave={reset}><Image {...artworkImages.ahava} sizes="(max-width: 600px) 75vw, 30vw" loading="lazy"/><div className="tilt-caption"><span>אהבה. זהב. טקסטורה.</span><span dir="ltr">AHAVA / ATELIER JUDAICA</span></div></div>;
 }

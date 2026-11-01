@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
+import { galleryItems, socialLinks } from "@/data/site";
 import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "קרדיטים לצילומים | Atelier Judaica",
-  description: "מקורות הצילומים המשמשים להשראה ולהמחשת העיצוב באתר Atelier Judaica.",
+  title: "מקורות וצילומי העבודות | Atelier Judaica",
+  description: "הפרסומים המקוריים של עבודות Atelier Judaica והמקורות לסיפור האטלייה.",
   ...(siteUrl ? { alternates: { canonical: "/photo-credits/" } } : {}),
 };
 
-const photos = [
-  ["Tamara Harhai", "כלי קרמיקה על בד טבעי", "https://unsplash.com/photos/-cfd9px-GV8"],
-  ["Tamara Harhai", "זוג כלי קרמיקה", "https://unsplash.com/photos/tSkPbVkiCqY"],
-  ["Mary Skrynnikova", "אגרטלים לבנים באור טבעי", "https://unsplash.com/photos/7T12an8w_hQ"],
-  ["Earl Wilcox", "תהליך עבודה באובניים", "https://unsplash.com/photos/88DYIsFhuSs"],
-  ["Chloe Bolton", "אוסף כלי קרמיקה", "https://unsplash.com/photos/R0qthXq3jec"],
-];
 export default function PhotoCredits() {
-  return <main id="main" className="document-page container" tabIndex={-1}><a className="text-link" href="/">→ חזרה לאתר</a><p className="eyebrow">ATELIER JUDAICA / PHOTOGRAPHY</p><h1>מאחורי הצילומים.</h1><p>הצילומים באתר הם צילומי אווירה והשראה מ־Unsplash. הם אינם מתעדים את אסתר, את הסטודיו שלה או את מוצרי Atelier Judaica. הכותרות בקטלוג מתארות כיווני השראה, ולא שמות של מוצרים למכירה.</p><h2>הצלמים והמקורות</h2><ul>{photos.map(([author, description, url]) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer">{description} — <span dir="ltr">{author}</span></a></li>)}</ul><p>הצילומים הורדו מהאוסף החינמי ומשמשים בהתאם ל־<a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">רישיון Unsplash</a>. הקבצים דחוסים ומוגשים מקומית, ללא טעינה משירות תמונות חיצוני בזמן הגלישה.</p><p>לפני השקת הקולקציה למכירה, יש להחליף את צילומי ההשראה בתמונות ובפרטי מוצרים מאושרים של בעלת העסק.</p></main>;
+  return <main id="main" className="document-page container" tabIndex={-1}><a className="text-link" href="/">→ חזרה לאתר</a><p className="eyebrow">ATELIER JUDAICA / ORIGINAL WORKS</p><h1>העבודות והסיפור שלהן.</h1><p>צילומי היצירות באתר מופיעים בפרופילים של Atelier Judaica ב־Instagram וב־Facebook. זכויות היוצרים ביצירות ובצילומים שמורות לבעליהן. לצד כל עבודה בקטלוג מופיע קישור לפרסום המקורי שלה.</p><h2>היצירות בקולקציה</h2><ul>{galleryItems.map(item => <li key={item.id}><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.title} — לפרסום המקורי ↗</a>{item.dimensions && <span> · {item.dimensions}</span>}</li>)}</ul><h2>הסיפור של אסתר</h2><p>הטקסט על תחילת היצירה מבוסס על <a href={socialLinks.story} target="_blank" rel="noopener noreferrer">הפוסט שבו אסתר מספרת את סיפור האטלייה</a>. המידע על הזמנות אישיות ועל ההשראה מישראל ומהמורשת היהודית מופיע בפרופילי העסק.</p><h2>צילומים נוספים</h2><ul><li><a href="https://www.facebook.com/photo/?fbid=963026403012432" target="_blank" rel="noopener noreferrer">תקריב טקסטורה — מתוך עמוד Facebook של Atelier Judaica ↗</a></li><li><a href={socialLinks.story} target="_blank" rel="noopener noreferrer">הצילום של אסתר עם יצירתה — מתוך פוסט סיפור האטלייה ↗</a></li></ul><p>בחירת עבודה באתר משמשת להכנת פנייה אישית בלבד. מחיר, מידות, התאמה אישית, זמינות ומשלוח יש לתאם ישירות עם אסתר.</p><div className="social-links"><a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></main>;
 }

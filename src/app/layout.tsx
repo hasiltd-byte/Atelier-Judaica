@@ -9,6 +9,7 @@ import { site } from "@/data/site";
 import { indexable, siteUrl } from "@/lib/seo";
 import "./globals.css";
 import "./performance.css";
+import "./artist-theme.css";
 
 export const metadata: Metadata = {
   title: site.title,
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   icons: { icon: "/icon.svg" },
 };
 
-export const viewport: Viewport = { themeColor: "#1f3329", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#fffdf9", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="he" dir="rtl"><body><a className="skip-link" href="#main">דילוג לתוכן הראשי</a>{children}</body></html>;

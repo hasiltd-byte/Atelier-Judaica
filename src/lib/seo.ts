@@ -1,4 +1,4 @@
-import { site } from "@/data/site";
+import { site, socialLinks } from "@/data/site";
 
 export function resolveSiteUrl(value: string | undefined): string | undefined {
   if (!value?.trim()) return undefined;
@@ -20,6 +20,7 @@ export function structuredData(url: string | undefined) {
       {
         "@type": "Organization", name: site.name, description: site.description,
         telephone: site.phoneHref, email: site.email,
+        sameAs: [socialLinks.instagram, socialLinks.facebook],
         ...(url ? { "@id": `${url}/#organization`, url } : {}),
         contactPoint: { "@type": "ContactPoint", telephone: site.phoneHref, email: site.email, contactType: "customer service", availableLanguage: "Hebrew" },
       },
