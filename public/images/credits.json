@@ -1,0 +1,51 @@
+{
+  "license": "https://unsplash.com/license",
+  "purpose": "Atmospheric photography only. These are not Esther's works or products.",
+  "photos": [
+    {
+      "name": "hero-still-life",
+      "id": "1677761821976-4a2b4ed29437",
+      "author": "Tamara Harhai",
+      "page": "https://unsplash.com/photos/-cfd9px-GV8",
+      "width": 1500,
+      "height": 2249,
+      "bytes": 329458
+    },
+    {
+      "name": "ceramic-pair",
+      "id": "1677761640321-b80251be00ca",
+      "author": "Tamara Harhai",
+      "page": "https://unsplash.com/photos/tSkPbVkiCqY",
+      "width": 1000,
+      "height": 1499,
+      "bytes": 64032
+    },
+    {
+      "name": "white-vases",
+      "id": "1638303322325-ff70d6224a22",
+      "author": "Mary Skrynnikova",
+      "page": "https://unsplash.com/photos/7T12an8w_hQ",
+      "width": 1000,
+      "height": 1312,
+      "bytes": 34284
+    },
+    {
+      "name": "studio-hands",
+      "id": "1609881582441-7c9385db15c3",
+      "author": "Earl Wilcox",
+      "page": "https://unsplash.com/photos/88DYIsFhuSs",
+      "width": 1200,
+      "height": 800,
+      "bytes": 100024
+    },
+    {
+      "name": "ceramic-collection",
+      "id": "1597696929736-6d13bed8e6a8",
+      "author": "Chloe Bolton",
+      "page": "https://unsplash.com/photos/R0qthXq3jec",
+      "width": 1100,
+      "height": 733,
+      "bytes": 49124
+    }
+  ]
+}

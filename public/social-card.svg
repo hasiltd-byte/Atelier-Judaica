@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="blend"><stop stop-color="#1f332900"/><stop offset="1" stop-color="#1f3329"/></linearGradient></defs>
+<rect width="1200" height="630" fill="#1f3329"/>
+<image href="images/hero-still-life.webp" x="0" y="0" width="660" height="630" preserveAspectRatio="xMidYMax slice"/>
+<rect x="420" width="280" height="630" fill="url(#blend)"/>
+<text x="900" y="220" text-anchor="middle" font-family="Georgia,serif" font-size="108" letter-spacing="-5" fill="#f6f2e9">atelier</text>
+<text x="900" y="266" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" letter-spacing="12" fill="#d3ba88">JUDAICA</text>
+<path d="M740 310h320" stroke="#a3af8d" opacity=".5"/>
+<text x="900" y="385" direction="rtl" text-anchor="middle" font-family="Arial,sans-serif" font-size="46" fill="#f6f2e9">אמנות עם נשמה.</text>
+<text x="900" y="446" direction="rtl" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" fill="#d3ba88">לבית עם אופי.</text>
+<text x="900" y="523" direction="rtl" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#dddccd">אסתר · מכירות ושירות אונליין</text>
+<text x="25" y="605" font-family="Arial,sans-serif" font-size="11" fill="#fff">Atmospheric photography: Tamara Harhai / Unsplash</text>
+</svg>

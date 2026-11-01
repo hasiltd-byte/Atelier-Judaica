@@ -1,0 +1,24 @@
+/* Skip off-screen section layout and paint until it approaches the viewport.
+   Remember rendered heights; the fallback sizes match the responsive layout. */
+main > section:not(.hero-stage), .quote-band { content-visibility: auto; }
+.gallery-section { contain-intrinsic-block-size: auto 947px; }
+.shop-section { contain-intrinsic-block-size: auto 1010px; }
+.perspective-section { contain-intrinsic-block-size: auto 500px; }
+.about-section { contain-intrinsic-block-size: auto 510px; }
+.quote-band { contain-intrinsic-block-size: auto 148px; }
+.faq-section { contain-intrinsic-block-size: auto 365px; }
+.contact-section { contain-intrinsic-block-size: auto 543px; }
+@media (max-width: 800px) {
+  .gallery-section { contain-intrinsic-block-size: auto 700px; }
+  .shop-section { contain-intrinsic-block-size: auto 890px; }
+  .about-section { contain-intrinsic-block-size: auto 550px; }
+}
+@media (max-width: 600px) {
+  .gallery-section { contain-intrinsic-block-size: auto 870px; }
+  .shop-section { contain-intrinsic-block-size: auto 2109px; }
+  .perspective-section { contain-intrinsic-block-size: auto 870px; }
+  .about-section { contain-intrinsic-block-size: auto 921px; }
+  .quote-band { contain-intrinsic-block-size: auto 164px; }
+  .faq-section { contain-intrinsic-block-size: auto 614px; }
+  .contact-section { contain-intrinsic-block-size: auto 1023px; }
+}
