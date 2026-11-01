@@ -31,6 +31,7 @@ export const artworkImages = {
 
 export const site = {
   name: "Atelier Judaica",
+  publicUrl: "https://atelierjudaica.mybizsite.co",
   contactName: "אסתר",
   title: "Atelier Judaica | אמנות יודאיקה בטקסטורה — אסתר",
   description: "אמנות יודאיקה עשירה בטקסטורה בהשראת ישראל והמורשת היהודית. גלו את היצירות של אסתר, מפות ישראל, אותיות וסמלים, ופנו להזמנה אישית ב־Atelier Judaica.",

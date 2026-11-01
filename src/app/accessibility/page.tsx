@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
-import { siteUrl } from "@/lib/seo";
+import { sharingOrigin, siteUrl, socialImage } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: `נגישות ויצירת קשר | ${site.name}`,
   description: "מידע על אפשרויות הנגישות ודרכי הפנייה בנושא נגישות באתר Atelier Judaica.",
-  ...(siteUrl ? { alternates: { canonical: "/accessibility/" }, openGraph: { title: `נגישות ויצירת קשר | ${site.name}`, url: `${siteUrl}/accessibility/` } } : {}),
+  ...(siteUrl ? { alternates: { canonical: "/accessibility/" } } : {}),
+  openGraph: { title: `נגישות ויצירת קשר | ${site.name}`, url: `${sharingOrigin}/accessibility/`, images: [socialImage] },
 };
 
 export default function AccessibilityPage() {

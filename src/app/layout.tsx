@@ -6,7 +6,7 @@ import "@fontsource/assistant/latin-400.css";
 import "@fontsource/frank-ruhl-libre/hebrew-400.css";
 import "@fontsource/frank-ruhl-libre/hebrew-500.css";
 import { site } from "@/data/site";
-import { indexable, siteUrl } from "@/lib/seo";
+import { indexable, sharingOrigin, siteUrl, socialImage } from "@/lib/seo";
 import "./globals.css";
 import "./performance.css";
 import "./artist-theme.css";
@@ -15,15 +15,15 @@ export const metadata: Metadata = {
   title: site.title,
   description: site.description,
   applicationName: site.name,
-  metadataBase: new URL(siteUrl || "http://127.0.0.1:3000"),
+  metadataBase: new URL(sharingOrigin),
   ...(siteUrl ? { alternates: { canonical: "/" } } : {}),
   robots: { index: indexable, follow: indexable },
   openGraph: {
     title: site.title, description: site.description, siteName: site.name,
-    locale: "he_IL", type: "website", ...(siteUrl ? { url: siteUrl } : {}),
-    images: [{ url: siteUrl ? `${siteUrl}/social-card.png` : "/social-card.png", width: 1200, height: 630, alt: "Atelier Judaica — אמנות לבית" }],
+    locale: "he_IL", type: "website", url: sharingOrigin,
+    images: [socialImage],
   },
-  twitter: { card: "summary_large_image", title: site.title, description: site.description, images: [siteUrl ? `${siteUrl}/social-card.png` : "/social-card.png"] },
+  twitter: { card: "summary_large_image", title: site.title, description: site.description, images: [socialImage.url] },
   icons: { icon: "/icon.svg" },
 };
 

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { galleryItems, socialLinks } from "@/data/site";
-import { siteUrl } from "@/lib/seo";
+import { sharingOrigin, siteUrl, socialImage } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "מקורות וצילומי העבודות | Atelier Judaica",
   description: "הפרסומים המקוריים של עבודות Atelier Judaica והמקורות לסיפור האטלייה.",
   ...(siteUrl ? { alternates: { canonical: "/photo-credits/" } } : {}),
+  openGraph: { title: "מקורות וצילומי העבודות | Atelier Judaica", url: `${sharingOrigin}/photo-credits/`, images: [socialImage] },
 };
 
 export default function PhotoCredits() {

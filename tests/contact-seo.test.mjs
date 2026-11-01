@@ -72,6 +72,9 @@ for (const scenario of [
     const robots = await import(await moduleUrl("src/app/robots.ts", { "@/lib/seo": seoUrl }));
     const sitemap = await import(await moduleUrl("src/app/sitemap.ts", { "@/lib/seo": seoUrl }));
     assert.equal(seo.indexable, scenario.expected);
+    assert.equal(seo.sharingOrigin, scenario.url || "https://atelierjudaica.mybizsite.co");
+    assert.equal(seo.socialImage.url, `${seo.sharingOrigin}/atelier-judaica-share.jpg`);
+    assert.equal(seo.socialImage.type, "image/jpeg");
     assert.deepEqual(robots.default().rules, scenario.expected ? { userAgent: "*", allow: "/" } : { userAgent: "*", disallow: "/" });
     assert.equal(sitemap.default().length, scenario.expected ? 3 : 0);
     if (scenario.expected) {
