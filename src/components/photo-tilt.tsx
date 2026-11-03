@@ -26,5 +26,5 @@ export function PhotoTilt() {
     frame.current?.style.setProperty("--tilt-y", "0deg");
     frame.current?.style.setProperty("--tilt-x", "0deg");
   }
-  return <div ref={frame} className="tilt-frame" onPointerMove={move} onPointerLeave={reset}><Image {...artworkImages.ahava} sizes="(max-width: 600px) 75vw, 30vw" loading="lazy"/><div className="tilt-caption"><span>אהבה. זהב. טקסטורה.</span><span dir="ltr">AHAVA / ATELIER JUDAICA</span></div></div>;
+  return <div ref={frame} className="tilt-frame" onPointerMove={move} onPointerLeave={reset}><Image {...artworkImages.candlesticks} sizes="(max-width: 600px) 75vw, 30vw" loading="lazy"/><div className="tilt-caption"><span>כחול. אור. רגע של שבת.</span><span dir="ltr">COBALT / RIMON</span></div></div>;
 }

@@ -1,0 +1,130 @@
+:root { --paper:#fff9ed; --ink:#172f81; --deep:#173ca7; --muted:#4d536a; --gold:#ffcd4a; --line:#d6d9dc; --coral:#c94531; }
+::selection { background:#ffcd4a; color:#172f81; }
+:focus-visible { outline-color:#173ca7; }
+em { color:var(--coral); }
+.announcement { background:#183ca6; color:#fff; border:0; }
+.announcement-en { color:#ffdd77; }
+.site-header { background:var(--paper); }
+.header-inner { height:112px; }
+.rimon-logo { display:inline-flex; align-items:center; gap:10px; direction:rtl; text-align:right; color:#173ca7; }
+.rimon-logo-type { font:600 47px/.9 var(--serif); letter-spacing:-2px; }
+.rimon-logo-type>span { display:block; font:500 10px/1.4 var(--sans); letter-spacing:1px; margin-top:9px; }
+.wordmark { direction:rtl; }
+.main-nav { gap:22px; }
+.header-contact { border-color:#173ca7; }
+.hero-stage { background:#fff0ce; color:var(--ink); min-height:770px; border-radius:3px 3px 50px 3px; }
+.hero-stage::before { display:none; }
+.hero-photo { width:51%; }
+.hero-photo img { object-position:39% center; }
+.hero-content { width:49%; padding:66px 4.5% 34px 3%; }
+.hero-content>.eyebrow { color:#173ca7; font-size:10px; letter-spacing:1.6px; }
+.hero-content h1 { font-size:clamp(65px,6.1vw,100px); line-height:1.05; letter-spacing:-2px; margin-block:31px 23px; }
+.hero-content h1 em { color:var(--coral); }
+.hero-content h1>span { font:500 22px/1.6 var(--sans); letter-spacing:0; margin-top:24px; }
+.hero-description { color:#38456a; font-size:18px; max-width:390px; line-height:1.9; }
+.hero-about { color:var(--ink); }
+.hero-bottom { color:#414964; border-color:#193c9c3d; max-width:400px; }
+.hero-index { font-size:8px; letter-spacing:1px; }
+.hero-scroll { border-color:#173ca75c; }
+.hero-photo-word { font-size:55px; color:#fff9ed; text-shadow:0 2px 25px #3b282455; }
+.hero-photo-word em { color:#fff9ed; }
+.photo-credit { color:#fff; background:#173ca7; font-size:10px; padding:7px 12px; }
+.hero-seal { left:50%; top:32px; color:#fff7da; background:#173ca7; border-radius:50%; width:116px; height:116px; }
+.hero-floating { left:45%; bottom:30px; background:#fff9ed; border-radius:4px; box-shadow:0 12px 35px #25325c33; }
+.hero-floating figcaption { color:#173ca7; }
+.button { border-radius:5px; }
+.button-gold { background:#173ca7; color:white; }
+.button-gold:hover { background:#10296f; }
+.button-dark { background:#173ca7; color:#fff; }
+.button-dark:hover { background:#10296f; }
+.text-link:hover { color:#a73223; }
+.marquee { background:#ffcf52; border-color:#edbc37; padding-block:23px; }
+.marquee-group em { color:#173476; }
+.marquee-group svg { color:#c94531; }
+.editorial-intro .eyebrow { color:#173ca7; }
+.editorial-card { border-radius:8px; background:#ffdb9a; }
+.editorial-card::after { background:linear-gradient(0deg,#112a75e8,transparent 50%); }
+.editorial-number { background:#fff8e9ed; color:#173ca7; }
+.editorial-caption { bottom:26px; }
+.editorial-caption small { color:#fff8e9; }
+.image-disclosure { color:#50536a; }
+.image-disclosure a { text-decoration:underline; }
+.shop-section { background:#edf1ff; }
+.shop-intro>p,.product-meta>p,.product-meta>div,.catalog-note>p,.catalog-filters button { color:#454f70; }
+.catalog-toolbar,.product-meta>div { border-color:#c5cde5; }
+.catalog-filters button[aria-pressed="true"] { color:#173ca7; border-color:#173ca7; }
+.shop-grid { row-gap:45px; }
+.product-photo { border-radius:8px; background:#e2e9ff; }
+.product-view>img { object-fit:cover; object-position:center; }
+.photo-tag { color:#173ca7; background:#fff9edf5; font-size:10px; border-radius:20px; }
+.product-add { color:#173ca7; background:#fff9ed; }
+.product-add[aria-pressed="true"] { color:white; background:#173ca7; }
+.quick-view { background:#173ca7ef; }
+.catalog-note>span { border-color:#abb9e4; color:#173ca7; }
+.product-dialog-grid>img { object-fit:contain; background:#ecedeb; }
+.shop-dialog { border-radius:12px; }
+.cart-list li>div>span { color:#4c526b; }
+.perspective-section { background:#183da8; color:#fff8e9; }
+.perspective-copy .eyebrow { color:#ffdc76; }
+.perspective-copy h2 { font-size:72px; }
+.perspective-copy em { color:#ffcf52; }
+.perspective-copy>p:not(.eyebrow) { color:#f1f0ee; }
+.perspective-copy>.perspective-hint { color:#e0e9ff!important; }
+.button-outline { color:#fff8e9; border-color:#d0d9ff; }
+.button-outline:hover { background:#ffffff19; }
+.perspective-orbit { border-color:#b9cbff66; }
+.perspective-orbit::after { background:#ffcf52; box-shadow:0 0 25px #ffcf5266; }
+.perspective-word { color:#ffffff26; font-size:65px; }
+.tilt-frame { background:#fff8e9; box-shadow:20px 25px 55px #09143f66; }
+.tilt-frame>img { object-fit:cover; object-position:center; }
+.tilt-caption { color:#173ca7; }
+.perspective-photo-note { color:#fff0b6; }
+.about-image { margin:0; padding:0; background:#ffcd4a; min-height:0; height:auto; border:0; border-radius:100px 8px 8px 8px; overflow:hidden; }
+.about-image::after { display:none; }
+.about-image>img { width:100%; height:auto; min-height:0; object-fit:cover; filter:none; }
+.about-image>figcaption { font-size:12px; padding:12px 18px; text-align:center; color:#173476; }
+.about-copy>.eyebrow { color:#173ca7; }
+.about-description { font-size:17px; line-height:1.9; color:#454f69; }
+.about-description+.about-description { margin-top:15px; }
+.about-signature { color:#c94531; }
+.about-signature>span { color:#173ca7; font-size:9px; letter-spacing:1.5px; }
+.quote-band { background:#fbd0bf; }
+.quote-band>span { color:#6f382b; }
+.faq-list { border-top-color:#173ca7; }
+.faq-list details { border-color:#d3d9e7; }
+.faq-index { color:#173ca7; }
+.faq-plus::before,.faq-plus::after { background:#173ca7; }
+.contact-section { background:#fff0ce; }
+.contact-copy>p:not(.eyebrow) { color:#454f69; }
+.launch-note { display:flex; gap:15px; align-items:center; margin-top:30px; font-size:16px; }
+.launch-note svg { color:#c94531; width:24px; }
+.contact-form { background:#fffaf1; border:1px solid #decfae; border-radius:10px; }
+.form-heading { font-size:25px; }
+.form-heading svg { color:#c94531; width:25px; }
+.field label>span { color:#53556a; }
+.field input,.field textarea,.prepared-message textarea { border-color:#8e96ab; color:#172f81; background:transparent; border-radius:3px; }
+.field input::placeholder,.field textarea::placeholder { color:#626878; }
+.field input:focus,.field textarea:focus { outline-color:#173ca7; border-color:#173ca7; }
+.form-note { color:#53556a; }
+.field-error { color:#ac2d20; }
+.form-status { color:#173ca7; font-size:14px; margin-top:14px; }
+.prepared-message { margin-top:22px; }
+.prepared-message>label { font-size:14px; }
+.prepared-message textarea { width:100%; padding:14px; margin-top:8px; font-size:14px; line-height:1.8; resize:vertical; }
+.prepared-message>div { display:flex; gap:22px; flex-wrap:wrap; }
+.prepared-message button { font-size:14px; }
+.site-footer { background:#173ca7; color:#fff9ed; }
+.site-footer .rimon-logo { color:#fff9ed; }
+.site-footer .rimon-logo>svg path:first-child,.site-footer .rimon-logo>svg path:nth-child(2) { fill:#ffce57; }
+.site-footer .rimon-logo>svg path:last-child { stroke:#173ca7; }
+.footer-brand { font-size:inherit; direction:rtl; }
+.footer-main>p { color:#fff9ed; }
+.footer-bottom { color:#fff8e9; border-color:#ffffff44; }
+.motion-control { color:#fff8e9; border-color:#ffffff88; }
+.floating-whatsapp { background:#173ca7; color:#fff; border:1px solid #fff8e9; box-shadow:0 6px 24px #173ca733; }
+.floating-whatsapp:hover { background:#10296f; }
+.document-page .content-placeholder { color:#4d536a; border-color:#173ca7; }
+@media(max-width:1100px){.hero-content h1{font-size:76px}.main-nav{gap:14px}.main-nav>a{font-size:13px}.hero-content h1>span{font-size:19px}.hero-description{font-size:16px}.hero-photo-word{font-size:47px}.perspective-copy h2{font-size:62px}}
+@media(max-width:800px){.header-inner{height:96px}.rimon-logo-type{font-size:40px}.rimon-logo>svg{width:36px}.rimon-logo-type>span{font-size:8px}.hero-content{padding-top:48px;padding-right:4%;width:50%}.hero-content h1{font-size:62px}.hero-content h1>span{font-size:17px}.hero-actions{gap:12px}.hero-content>.eyebrow{font-size:8px}.hero-seal{width:86px;height:86px;left:49%;top:20px}.hero-description{font-size:16px}.hero-photo{width:50%}.hero-photo-word{font-size:40px;left:20px}.hero-bottom{font-size:10px}.hero-index{display:none}.perspective-copy h2{font-size:54px}.about-image,.about-image>img{height:auto;min-height:0}.form-heading{font-size:22px}}
+@media(max-width:600px){.header-inner{height:88px}.rimon-logo{gap:7px}.rimon-logo-type{font-size:37px}.rimon-logo>svg{width:34px;height:42px}.rimon-logo-type>span{font-size:8px;margin-top:6px;letter-spacing:.3px}.hero-stage{min-height:990px;border-radius:3px 3px 30px 3px}.hero-content{width:100%;padding:30px 25px 0}.hero-content>.eyebrow{font-size:9px;letter-spacing:1.1px}.hero-content h1{font-size:68px;margin-block:23px 15px;line-height:1.05}.hero-content h1 br{display:block}.hero-content h1>span{font-size:19px;line-height:1.5;margin-top:16px}.hero-description{font-size:16px;line-height:1.8;max-width:360px}.hero-actions{margin-top:21px;gap:18px;flex-direction:row;align-items:center}.hero-bottom{margin-top:21px;padding-top:15px}.hero-about{color:#173ca7}.hero-photo{top:495px;width:100%;bottom:0}.hero-photo img{object-position:43% center}.hero-seal{top:auto;bottom:433px;left:18%;width:84px;height:84px}.hero-floating{bottom:30px;left:auto;right:24px;width:100px}.hero-photo-word{font-size:42px;bottom:42px}.photo-credit{top:18px;bottom:auto;left:18px;font-size:9px}.editorial-caption strong{font-size:24px}.editorial-card:first-child .editorial-caption strong{font-size:32px}.editorial-card>img,.editorial-card:first-child>img{object-position:center}.shop-grid{grid-template-columns:1fr 1fr;gap:32px 15px}.product-photo{aspect-ratio:.69}.photo-tag{font-size:8px;top:10px;right:8px;padding:3px 7px}.product-add{width:31px;height:31px;left:8px;top:9px;font-size:23px}.quick-view{font-size:11px;padding:9px 10px}.product-meta{padding-top:14px}.product-meta>p{font-size:7px;letter-spacing:.6px}.product-meta h3{font-size:25px;line-height:1.25}.product-meta>div{font-size:10px;gap:3px}.product-details{width:26px;min-width:26px}.product-details svg{width:16px}.catalog-filters{gap:12px}.catalog-filters button{font-size:14px}.perspective-copy h2{font-size:57px}.perspective-word{font-size:56px}.tilt-frame>img{object-fit:cover}.about-image,.about-image>img{height:auto;min-height:0}.about-copy h2{font-size:52px}.about-description{font-size:17px}.quote-band>p{font-size:32px}.contact-copy h2{font-size:49px}.form-heading{font-size:24px}.footer-main>p{max-width:140px}.footer-bottom{padding-bottom:90px}}
+@media(max-width:360px){.hero-content{padding-inline:20px}.hero-stage{min-height:1015px}.hero-content h1{font-size:59px}.hero-content h1>span{font-size:17px}.hero-photo{top:520px}.hero-seal{bottom:430px}.hero-actions .button{font-size:12px}.rimon-logo-type{font-size:32px}.rimon-logo>svg{width:29px}.rimon-logo-type>span{font-size:7px}.catalog-filters button{font-size:12px}.product-meta h3{font-size:22px}.product-meta>div{font-size:9px}.perspective-copy h2{font-size:49px}.form-heading{font-size:21px}.photo-tag{display:none}}

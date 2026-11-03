@@ -1,5 +1,5 @@
 {
-  "name": "atelier-judaica",
+  "name": "rimon-judaica",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,8 @@
     "test:browser": "node scripts/check-browser.mjs",
     "audit": "node scripts/audit.mjs",
     "test:catalog": "node scripts/check-catalog.mjs",
-    "test:sharing": "node scripts/check-sharing.mjs"
+    "test:sharing": "node scripts/check-sharing.mjs",
+    "test:images": "node scripts/check-images.mjs"
   },
   "dependencies": {
     "@fontsource/assistant": "^5.2.0",

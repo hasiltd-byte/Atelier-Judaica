@@ -1,94 +1,36 @@
-export type WorkCategory = "מפות ישראל" | "מילים וסמלים";
+export type WorkCategory = "לשולחן ולשבת" | "אמנות לבית";
 export type ArtworkImage = { src: string; alt: string; width: number; height: number };
-export type GalleryItem = {
-  id: string;
-  title: string;
-  description: string;
-  image: ArtworkImage;
-  category: WorkCategory;
-  subtitle: string;
-  sourceUrl: string;
-  dimensions?: string;
-};
-
-export const socialLinks = {
-  instagram: "https://www.instagram.com/atelierjudaica/",
-  facebook: "https://www.facebook.com/p/Atelier-Judaica-100079152423019/",
-  story: "https://www.instagram.com/atelierjudaica/reel/DF2UYYxMxZl/",
-} as const;
-
+export type GalleryItem = { id: string; title: string; description: string; image: ArtworkImage; category: WorkCategory; subtitle: string };
+const photo = (name: string, alt: string): ArtworkImage => ({ src: `/images/rimon/${name}.webp`, alt, width: name === "jerusalem" ? 1086 : 1024, height: name === "jerusalem" ? 1448 : 1536 });
 export const artworkImages = {
-  israel: { src: "/images/atelier/israel-gold.webp", alt: "יצירה של Atelier Judaica: מפת ישראל בגוון זהב על רקע לבן עשיר בטקסטורה ובאותיות", width: 1400, height: 1867 },
-  chai: { src: "/images/atelier/chai.webp", alt: "יצירת חי של אסתר: אותיות בגוונים טבעיים בתוך מסגרת, על קיר אבן", width: 1400, height: 1867 },
-  ahava: { src: "/images/atelier/ahava.webp", alt: "אהבה — יצירה של אסתר עם אותיות לבנות על רקע עלי זהב וחול ישראלי", width: 1400, height: 1867 },
-  star: { src: "/images/atelier/magen-david.webp", alt: "מגן דוד עשיר בטקסטורה בגוון זהב על רקע כחול, יצירה של Atelier Judaica", width: 1400, height: 1867 },
-  shin: { src: "/images/atelier/shin.webp", alt: "האות שין בגווני נחושת וזהב על רקע לבן, מתוך העבודות של Atelier Judaica", width: 1400, height: 1867 },
-  poppies: { src: "/images/atelier/israel-poppies.webp", alt: "מפת ישראל מעוטרת בפרחים אדומים, מתוך עבודות הזיכרון של Atelier Judaica", width: 1400, height: 1867 },
-  texture: { src: "/images/atelier/texture-detail.webp", alt: "תקריב של יצירה של אסתר: טקסטורה לבנה לצד טורקיז ופרטים בגוון זהב", width: 1400, height: 1867 },
-  portrait: { src: "/images/atelier/esther.webp", alt: "אסתר מציגה יצירה של מפת ישראל, מתוך הפוסט שבו היא מספרת על סיפור Atelier Judaica", width: 361, height: 640 },
-  process: { src: "/images/atelier/process.webp", alt: "אסתר עם אחת היצירות שלה בתהליך העבודה, מתוך פרסום של Atelier Judaica", width: 361, height: 640 },
+  candlesticks: photo("candlesticks", "הדמיה של זוג פמוטי קרמיקה בכחול קובלט עם נרות לבנים"),
+  kiddush: photo("kiddush", "הדמיה של גביע קידוש וקערית מקרמיקה בגוון קורל"),
+  mezuzah: photo("mezuzah", "הדמיה של בית מזוזה מקרמיקה בגוון טורקיז"),
+  hamsa: photo("hamsa", "הדמיה של חמסה צבעונית מקרמיקה על קיר צהוב"),
+  pomegranate: photo("pomegranate", "הדמיה של צלחת רימון בגוון טורקיז"),
+  jerusalem: photo("jerusalem", "הדמיה של אמנות גאומטרית צבעונית בהשראת ירושלים במסגרת עץ"),
 } satisfies Record<string, ArtworkImage>;
-
 export const site = {
-  name: "Atelier Judaica",
-  publicUrl: "https://atelierjudaica.mybizsite.co",
-  contactName: "אסתר",
-  title: "Atelier Judaica | אמנות יודאיקה בטקסטורה — אסתר",
-  description: "אמנות יודאיקה עשירה בטקסטורה בהשראת ישראל והמורשת היהודית. גלו את היצירות של אסתר, מפות ישראל, אותיות וסמלים, ופנו להזמנה אישית ב־Atelier Judaica.",
-  phone: "054-700-7608",
-  phoneHref: "+972547007608",
-  whatsapp: "972547007608",
-  email: "myatelierjudaica@gmail.com",
-  service: "מכירות ושירות אונליין",
-  nav: [
-    { label: "הגלריה", href: "#gallery" },
-    { label: "הקולקציה", href: "#shop" },
-    { label: "הסיפור שלי", href: "#about" },
-    { label: "שאלות נפוצות", href: "#faq" },
-  ],
-  hero: {
-    eyebrow: "TEXTURED JUDAICA ART",
-    heading: "ישראל. מורשת.",
-    emphasis: "אמנות.",
-    tagline: "להכניס הביתה אור ותקווה.",
-    description: "יצירות יודאיקה עשירות בטקסטורה, בהשראת ישראל והמורשת היהודית. אמנות של זהות, שייכות וחיבור — מבית Atelier Judaica.",
-  },
-  gallery: {
-    eyebrow: "THE ART OF BELONGING",
-    heading: "חיבור שאפשר להרגיש.",
-    description: "מפת ישראל, אותיות וסמלים יהודיים מקבלים נוכחות דרך מרקם, צבע וחומר. הצצה לעולם היצירה של אסתר.",
-    note: "כל צילומי העבודות בעמוד נלקחו מהפרופילים של Atelier Judaica שצורפו לפרויקט. פרטי כל יצירה וזמינותה לבירור ישיר עם אסתר.",
-  },
-  about: {
-    eyebrow: "THE STORY BEHIND THE ART",
-    heading: "נעים להכיר, אסתר.",
-    paragraphs: [
-      "מאחורי Atelier Judaica עומדת אסתר, שיוצרת אמנות בטקסטורה מתוך חיבור לישראל ולמורשת היהודית. ביצירות שלה, סמלים מוכרים פוגשים עיצוב עכשווי ושפה אישית של אור ותקווה.",
-      "בפוסט שבו שיתפה את סיפורה, אסתר מתארת כיצד פנתה לציור לאחר אירועי 7 באוקטובר, בתקופה שבה בן זוגה שירת במילואים. היצירה הפכה עבורה למרחב של ביטוי וחוסן — ודרך לתת לרגש צורה.",
-      "החיבור הזה נוכח גם בקולקציה: מפות ישראל, אותיות ומילים שמספרות על שורשים, זיכרון ושייכות. אפשר לפנות לאסתר גם להזמנה אישית.",
-    ],
-  },
+  name: "רימון",
+  title: "רימון | יודאיקה בצבע אחר — אמנות, שבת ובית",
+  description: "יודאיקה בצבע אחר. פמוטים, כלי קידוש, מזוזות ואמנות לבית בשפה עכשווית של צבע, צורה ומסורת. גלו את עולם ההשראה של רימון.",
+  service: "מסורת. עם טוויסט.",
+  nav: [{ label: "ההשראה", href: "#gallery" }, { label: "הקולקציה", href: "#shop" }, { label: "העולם שלנו", href: "#about" }, { label: "שאלות נפוצות", href: "#faq" }],
+  hero: { eyebrow: "A FRESH TAKE ON TRADITION", description: "לרגע שבו מדליקים נרות. לשולחן שכולם מתכנסים סביבו. לפינה שעושה לכם שמח. יודאיקה שמחברת מסורת, עיצוב והמון צבע." },
+  about: { paragraphs: ["אנחנו אוהבים את הרגעים הקטנים שהופכים מקום לבית: אור של נר, שולחן ערוך, חפץ עם משמעות. רימון הוא עולם של יודאיקה שמסתכל על המסורת בעיניים רעננות.", "כחול עמוק לצד קורל, צורות רכות ליד קווים נקיים. מפגש בין סמלים מוכרים לשפה עכשווית, שמזמין לתת לאופי שלכם מקום גם בחפצים שסביבכם.", "כאן אפשר לגלות כיוונים, לשמור פריטים שאהבתם ולדמיין את החיבור הבא לבית שלכם."] },
   faq: [
-    { question: "איך אפשר ליצור קשר עם אסתר?", answer: "אפשר לשלוח הודעה ב־WhatsApp, להתקשר ל־054-700-7608 או לכתוב למייל myatelierjudaica@gmail.com. אפשר גם לפנות דרך פרופילי Instagram ו־Facebook של Atelier Judaica." },
-    { question: "איך מבררים על יצירה מהקולקציה?", answer: "בחרו את העבודות שאהבתם והוסיפו אותן לסל הפנייה. משם תוכלו להכין הודעת WhatsApp עם הבחירות ולברר עם אסתר מחיר, מידות וזמינות. הוספה לסל אינה הזמנה או שמירת יצירה." },
-    { question: "אפשר להזמין יצירה בהתאמה אישית?", answer: "כן. בפרופילים של Atelier Judaica מוצעת אפשרות להזמנות אישיות. אפשר לפנות לאסתר עם הרעיון, המידה והכיוון הרצוי, ולתאם איתה את האפשרויות והפרטים." },
-    { question: "מה לגבי משלוחים וזמני הכנה?", answer: "תנאי משלוח וזמני הכנה לא נקבעו באתר. לפני הזמנה יש לברר עם אסתר את זמינות העבודה, אופן המשלוח וזמן ההכנה בהתאם לבקשה." },
+    { question: "מה אפשר למצוא בקולקציה?", answer: "פמוטים, גביע קידוש, בית מזוזה, חמסה, צלחת רימון ואמנות בהשראת ירושלים. אפשר לסנן בין פריטים לשולחן ולשבת לבין אמנות לבית." },
+    { question: "איך שומרים פריטים שאהבנו?", answer: "לוחצים על סימן הפלוס ליד הפריט. אפשר לפתוח את רשימת הבחירות ולהוריד אותה כקובץ טקסט למכשיר. הבחירה נשמרת רק במהלך הביקור הנוכחי." },
+    { question: "האם ניתן לרכוש דרך האתר?", answer: "כרגע הקולקציה היא קטלוג השראה. התמונות הן הדמיות שנוצרו עבור האתר, ולא מוצרים שמוצעים למכירה. מחירים, מלאי ואפשרויות הזמנה יתווספו עם השקת החנות." },
+    { question: "אפשר להכין פנייה עם רעיון אישי?", answer: "כן. באזור הפנייה אפשר לנסח רעיון ולהעתיק אותו. לא נשלחת הודעה ולא נשמרים פרטים באתר; ערוצי הקשר יתווספו עם פתיחת ההזמנות." },
   ],
-  contact: {
-    eyebrow: "LET’S CREATE SOMETHING MEANINGFUL",
-    heading: "כל יצירה מתחילה בחיבור.",
-    description: "אהבתם עבודה מהגלריה, או שיש לכם רעיון ליצירה אישית? אפשר לפנות לאסתר ולספר על מה שחשוב לכם להכניס הביתה.",
-    formNote: "הטופס מכין הודעה בלבד. היא תישלח רק לאחר אישור שלכם ב־WhatsApp. הפרטים אינם נשמרים באתר.",
-  },
 } as const;
-
 export const galleryItems: GalleryItem[] = [
-  { id: "01", title: "מפת ישראל בזהב", subtitle: "ISRAEL & ROOTS", category: "מפות ישראל", image: artworkImages.israel, description: "מפת ישראל בגוון זהב על רקע לבן עם טקסטורה וטקסט עברי. העבודה הוצגה בפרופיל Atelier Judaica כחלק מהקולקציה. פרטי מחיר ומידות מול אסתר.", sourceUrl: "https://www.instagram.com/atelierjudaica/p/DfFBj41DnEm/" },
-  { id: "02", title: "חי", subtitle: "CHAI · LIFE", category: "מילים וסמלים", image: artworkImages.chai, description: "יצירה עם המילה חי, בגוונים טבעיים ובטקסטורה. בפוסט המקורי היא מוצגת כעבודה בהזמנה אישית, במידה 60×60 ס״מ.", dimensions: "60×60 ס״מ — לפי הפרסום המקורי", sourceUrl: "https://www.instagram.com/atelierjudaica/p/DaxC4Yijrbv/" },
-  { id: "03", title: "אהבה", subtitle: "AHAVA · LOVE", category: "מילים וסמלים", image: artworkImages.ahava, description: "אותיות אהבה על רקע זהב. לפי הפרסום של אסתר, העבודה משלבת עלי זהב וחול ישראלי על קנבס במידה 80×80 ס״מ.", dimensions: "80×80 ס״מ — לפי הפרסום המקורי", sourceUrl: "https://www.instagram.com/atelierjudaica/p/DZsMwISAnZm/" },
-  { id: "04", title: "מגן דוד", subtitle: "HERITAGE & LIGHT", category: "מילים וסמלים", image: artworkImages.star, description: "מגן דוד בטקסטורה ובגוון זהב על רקע כחול עמוק. צילום מתוך העבודות שפורסמו בעמוד Atelier Judaica. מידות וזמינות לבירור אישי.", sourceUrl: "https://www.facebook.com/photo/?fbid=936371239011282" },
-  { id: "05", title: "האות שין", subtitle: "LETTERS & MEANING", category: "מילים וסמלים", image: artworkImages.shin, description: "האות שין בגוונים חמים על מצע לבן. העבודה מופיעה בעמוד Atelier Judaica ומשלבת את השפה הצורנית של האות עם נוכחות של חומר וטקסטורה.", sourceUrl: "https://www.facebook.com/photo/?fbid=975345218447217" },
-  { id: "06", title: "מפת ישראל ופרחים אדומים", subtitle: "MEMORY & HOPE", category: "מפות ישראל", image: artworkImages.poppies, description: "מפת ישראל מעוטרת בפרחים אדומים. בפוסט המקורי אסתר מציגה את העבודה כחלק מיצירות זיכרון לקורבנות 7 באוקטובר.", sourceUrl: "https://www.instagram.com/atelierjudaica/p/DeEmJ6-Dnaw/" },
+  { id: "01", title: "אור בכחול", subtitle: "SHABBAT / COBALT", category: "לשולחן ולשבת", image: artworkImages.candlesticks, description: "זוג פמוטים בגוון קובלט ובצורות רכות. רעיון לשולחן שבת עם נוכחות צבעונית ושקטה בו־זמנית." },
+  { id: "02", title: "לחיים בקורל", subtitle: "KIDDUSH / CORAL", category: "לשולחן ולשבת", image: artworkImages.kiddush, description: "גביע קידוש וקערית בגוון קורל חם. פרשנות עכשווית לרגע של ברכה סביב השולחן." },
+  { id: "03", title: "ברכה בפתח", subtitle: "MEZUZAH / TURQUOISE", category: "אמנות לבית", image: artworkImages.mezuzah, description: "בית מזוזה בגוון טורקיז ובצללית מאורכת. נגיעה קטנה של צבע ומשמעות בכניסה לבית. ההדמיה מציגה את הבית החיצוני בלבד, ללא קלף." },
+  { id: "04", title: "יד של צבע", subtitle: "HAMSA / GOOD ENERGY", category: "אמנות לבית", image: artworkImages.hamsa, description: "חמסה בקורל ובכחול, עם משחק גאומטרי וקווים חופשיים. רעיון לקיר שמעלה חיוך." },
+  { id: "05", title: "שפע בטורקיז", subtitle: "POMEGRANATE / ABUNDANCE", category: "לשולחן ולשבת", image: artworkImages.pomegranate, description: "צלחת בהשראת הרימון, בגוון טורקיז עשיר ובצללית משחקית. מפגש של סמל מוכר עם שולחן עכשווי." },
+  { id: "06", title: "ירושלים בצבע", subtitle: "JERUSALEM / NEW PERSPECTIVE", category: "אמנות לבית", image: artworkImages.jerusalem, description: "קשתות, גגות וצורות גאומטריות בקובלט, קורל וצהוב. מבט מופשט על ירושלים, במסגרת עץ חמימה." },
 ];
-
-export const catalogCategories = ["הכול", "מפות ישראל", "מילים וסמלים"] as const;
+export const catalogCategories = ["הכול", "לשולחן ולשבת", "אמנות לבית"] as const;

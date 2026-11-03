@@ -31,6 +31,6 @@ const server = createServer(async (req, res) => {
     res.end(req.method === "HEAD" ? undefined : body);
   } catch { res.writeHead(500); res.end("Preview server error. Run npm run build first."); }
 });
-server.listen(port, "127.0.0.1", () => console.log(`Atelier Judaica production preview: http://127.0.0.1:${port}`));
+server.listen(port, "127.0.0.1", () => console.log(`Rimon production preview: http://127.0.0.1:${port}`));
 process.on("SIGINT", () => server.close(() => process.exit(0)));
 process.on("SIGTERM", () => server.close(() => process.exit(0)));

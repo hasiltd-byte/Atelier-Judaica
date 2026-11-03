@@ -1,0 +1,42 @@
+{
+  "created": "2026-11-03",
+  "method": "Built-in image_gen",
+  "note": "Original AI-generated concept imagery for this website, not photographs of available products.",
+  "assets": [
+    {
+      "name": "hero",
+      "prompt": "Wide premium editorial product photography for a colorful contemporary Judaica design boutique. A vivid cobalt blue sculptural pair of ceramic Shabbat candlesticks holding two simple white candles, a coral pink ceramic kiddush wine cup on a small plate, a small turquoise pomegranate ornament, a cream linen textile. Tasteful terracotta and pale butter yellow architectural plinths, soft daylight, tactile real glaze, exquisite magazine still life. No text, logos, labels, people or watermarks. Original designs, not replicas. Landscape composition, products fully within frame, captivating shadows.",
+      "file": "hero-scene.webp"
+    },
+    {
+      "name": "candlesticks",
+      "prompt": "Premium studio product photograph of exactly two sculptural cobalt blue glazed ceramic Shabbat candlesticks with unlit ivory candles, sculptural stacked rounded shapes, on pale butter yellow background with small coral block, soft directional daylight and elegant shadows. Portrait composition, entire pair in frame, tactile realistic ceramics, fresh contemporary Judaica, no text logo watermark or people, original design.",
+      "file": "candlesticks.webp"
+    },
+    {
+      "name": "kiddush",
+      "prompt": "Premium product photography of a contemporary coral pink ceramic kiddush wine cup and matching saucer, elegant goblet shape with narrow stem, cobalt blue background and warm cream pedestal, soft side light, realistic ceramic glaze, portrait composition entire object visible, no text lettering logos watermark or people. Original modern Judaica design.",
+      "file": "kiddush.webp"
+    },
+    {
+      "name": "mezuzah",
+      "prompt": "Premium product photography of a modern turquoise ceramic mezuzah case with gently arched elongated geometric form, small embossed Hebrew letter shin only if rendered correctly, mounted on a warm peach doorway surface, cobalt blue slim edge, exquisite natural daylight, realistic tactile ceramic glaze. Portrait product editorial, no logos watermark labels or people. Original contemporary design.",
+      "file": "mezuzah.webp"
+    },
+    {
+      "name": "hamsa",
+      "prompt": "Premium product photography of a colorful modern ceramic hamsa hand wall decoration, symmetric traditional five-finger hand shape with two outward thumbs and three upright fingers, coral orange and cobalt blue glazed geometric motifs, hanging on a butter yellow plaster wall, beautiful sunshine shadows, portrait composition full object, sophisticated modern Judaica boutique, no text logos watermark people, original design.",
+      "file": "hamsa.webp"
+    },
+    {
+      "name": "pomegranate",
+      "prompt": "Premium product photography of a beautiful contemporary pomegranate-shaped ceramic serving dish, rich turquoise glaze inside and small terracotta crown top, filled with a few real pomegranate seeds, warm cream tabletop and cobalt blue background, natural directional light, portrait composition full dish visible, tactile real ceramics, no text lettering logos watermark or people, original Judaica design.",
+      "file": "pomegranate.webp"
+    },
+    {
+      "name": "jerusalem",
+      "prompt": "Premium interior product photography of an original framed abstract geometric art print inspired by the arched stone doorways and rooftops of Jerusalem, vivid cobalt blue terracotta coral and butter yellow forms, natural oak frame leaning against a warm cream plaster wall on a coral console, sophisticated modern Judaica home decor, portrait composition full artwork visible. No text Hebrew lettering logos watermark or people. Original design not a replica of an existing artist.",
+      "file": "jerusalem.webp"
+    }
+  ]
+}
